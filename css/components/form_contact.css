@@ -82,7 +82,11 @@
     opacity: 0.6;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
+}
+
+.contact-divider-small {
+    opacity: 0.3;
 }
 
 /* Responsive */

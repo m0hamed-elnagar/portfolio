@@ -11,7 +11,8 @@
     "whatsapp": "https://wa.me/201017713257",
     "telegram": "#",
     "heroSubtitle": "Skilled Android Developer with hands-on experience delivering production-grade applications from concept through deployment. Proficient in Kotlin, Room, Paging, Hilt, and Firebase services.",
-    "contactHeadline": "I’m always open to discussing new opportunities, collaborations, or simply connecting with like-minded people. Feel free to reach out via any of the platforms below!"
+    "contactHeadline": "I’m always open to discussing new opportunities, collaborations, or simply connecting with like-minded people. Feel free to reach out via any of the platforms below!",
+    "languages": "Arabic (Native), English (B2)"
   },
   "about": {
     "image": "portfolio/profile_pic.jpg",
@@ -24,42 +25,54 @@
   },
   "skills": [
     {
-      "category": "Android Core",
+      "category": "Architecture & Core",
+      "icon": "fas fa-sitemap",
+      "items": [
+        { "name": "Clean Architecture", "level": "Master" },
+        { "name": "MVVM / MVI", "level": "Advanced" },
+        { "name": "Multimodule Architecture", "level": "Advanced" },
+        { "name": "Domain Driven Design (DDD)", "level": "Advanced" },
+        { "name": "Dependency Injection (Hilt)", "level": "Master" },
+        { "name": "SOLID Principles", "level": "Master" },
+        { "name": "Product Flavors", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "Android Engine",
       "icon": "fab fa-android",
       "items": [
         { "name": "Kotlin", "level": "Master" },
-        { "name": "Java", "level": "Advanced" },
-        { "name": "Android SDK", "level": "Master" },
-        { "name": "Coroutines & Flow", "level": "Advanced" },
+        { "name": "Coroutines & Flow", "level": "Master" },
         { "name": "Jetpack Components", "level": "Master" },
-        { "name": "Dependency Injection (Hilt)", "level": "Advanced" },
-        { "name": "Clean Architecture", "level": "Advanced" },
-        { "name": "MVVM / MVI", "level": "Advanced" }
-      ]
-    },
-    {
-      "category": "Data & Persistence",
-      "icon": "fas fa-database",
-      "items": [
-        { "name": "Room Persistence", "level": "Master" },
-        { "name": "Paging 3", "level": "Advanced" },
-        { "name": "SQLite / MySQL", "level": "Advanced" },
-        { "name": "DataStore / SharedPreferences", "level": "Advanced" },
-        { "name": "NoSQL Persistence", "level": "Advanced" },
-        { "name": "JSON Serialization", "level": "Advanced" }
-      ]
-    },
-    {
-      "category": "Tools & Integrations",
-      "icon": "fas fa-tools",
-      "items": [
-        { "name": "Firebase Services", "level": "Advanced" },
-        { "name": "Git & GitHub", "level": "Advanced" },
+        { "name": "Room (Paging 3)", "level": "Master" },
         { "name": "WorkManager", "level": "Advanced" },
-        { "name": "Navigation Component", "level": "Advanced" },
-        { "name": "Apache POI", "level": "Advanced" },
+        { "name": "DataStore", "level": "Advanced" },
+        { "name": "Background Services", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "UI & Integrations",
+      "icon": "fas fa-layer-group",
+      "items": [
+        { "name": "Jetpack Compose", "level": "Advanced" },
+        { "name": "Material Design 3", "level": "Master" },
+        { "name": "RTL Layout Support", "level": "Master" },
+        { "name": "Apache POI (Excel)", "level": "Advanced" },
         { "name": "Google Credentials API", "level": "Advanced" },
-        { "name": "Unit/Integration Testing", "level": "Advanced" }
+        { "name": "Firebase Suite", "level": "Advanced" },
+        { "name": "Retrofit / REST", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "Quality & Tools",
+      "icon": "fas fa-check-circle",
+      "items": [
+        { "name": "Unit/Integration Testing", "level": "Advanced" },
+        { "name": "Git & GitHub", "level": "Advanced" },
+        { "name": "Proguard / R8", "level": "Advanced" },
+        { "name": "Postman", "level": "Advanced" },
+        { "name": "Agile / Scrum", "level": "Advanced" },
+        { "name": "Performance Tuning", "level": "Advanced" }
       ]
     }
   ],
@@ -69,42 +82,28 @@
       "category": "android",
       "description": "A comprehensive spiritual tool designed for tracking obligations and spiritual growth using Modular Clean Architecture and Domain-Driven Design.",
       "images": ["portfolio/profile_pic.jpg"],
-      "tech": ["Kotlin", "Modular Architecture", "DDD", "NoSQL", "WorkManager", "Material 3"],
+      "tech": ["Kotlin", "DDD", "NoSQL", "WorkManager", "Background Media", "RTL"],
       "features": [
-        "Offline-First Data Engine with NoSQL persistence",
-        "Immersive Quran Reader with interactive progress tracking",
-        "Global Time Automation for prayer times and notifications",
-        "Background Audio System with lock-screen controls"
+        "Modular Clean Architecture with 100% testable codebase",
+        "Global Time Automation engine for prayer sync (DST & Timezones)",
+        "System-level media service for background audio & lock-screen controls",
+        "Multi-engine Quran reader (Vector text & Image-based mushaf)",
+        "Performance tuned for 60fps animations & hardware-haptic feedback"
       ],
       "github": "https://github.com/m0hamed-elnagar",
       "demo": ""
     },
     {
-      "title": "DrAiA (Medical Sessions App)",
+      "title": "DrAiA (Medical Sessions)",
       "category": "android",
-      "description": "An Android application developed for managing patient records, exams, diagnoses, and treatments, specifically for ophthalmology.",
+      "description": "Patient record management system for ophthalmology, handling exams, diagnoses, and shared treatments.",
       "images": ["portfolio/profile_pic.jpg"],
-      "tech": ["Kotlin", "MVVM", "Clean Architecture", "Room", "Paging", "Coroutines"],
+      "tech": ["Kotlin", "Multimodule", "Product Flavors", "Room", "PDF Engine"],
       "features": [
-        "Patient record management and history tracking",
-        "Ophthalmology-specific data entry (lens dimensions)",
-        "Share treatments via WhatsApp as PDF or images",
-        "Multimodule architecture with product flavors"
-      ],
-      "github": "",
-      "demo": ""
-    },
-    {
-      "title": "OptPos (Seller Management)",
-      "category": "android",
-      "description": "Managed sellers' activities, billing, and registration with secure Google Sign-In integration.",
-      "images": ["portfolio/profile_pic.jpg"],
-      "tech": ["Kotlin", "Google Sign-In", "Billing API", "Room", "Firebase"],
-      "features": [
-        "Seller activity tracking and performance metrics",
-        "Billing and invoice processing",
-        "Secure registration and login with Google",
-        "Real-time data synchronization"
+        "Patient history and ophthalmology-specific lens data management",
+        "Automated PDF/Image generation for session summaries",
+        "Integrated WhatsApp sharing for medical reports",
+        "Shared codebase with OptPos using Product Flavors"
       ],
       "github": "",
       "demo": ""
@@ -112,14 +111,29 @@
     {
       "title": "Employee Attendance System",
       "category": "android",
-      "description": "Freelance project for streamlining employee attendance tracking with full Excel integration for data portability.",
+      "description": "Advanced tracking system with deep Excel integration for enterprise data portability.",
       "images": ["portfolio/profile_pic.jpg"],
-      "tech": ["Kotlin", "Apache POI", "StateFlow", "SafeArgs", "Room"],
+      "tech": ["Kotlin", "Apache POI", "StateFlow", "SafeArgs", "Excel Integration"],
       "features": [
-        "Excel data import/export for reporting",
-        "Detailed attendance status tracking (Present, Absent, Late)",
-        "Configurable weekends and holidays",
-        "Color-coded UI indicators for status"
+        "Robust Excel data import/export with complex validation logic",
+        "Configurable holiday/weekend logic for working-day calculations",
+        "Reactive UI architecture using StateFlow and SafeArgs navigation",
+        "Detailed reporting with rejection reason logging"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "OptPos (Retail Management)",
+      "category": "android",
+      "description": "Seller operations tool for billing, registration, and inventory tracking with secure authentication.",
+      "images": ["portfolio/profile_pic.jpg"],
+      "tech": ["Kotlin", "Google Sign-In", "Billing API", "Firebase", "MVI"],
+      "features": [
+        "Secure One-Tap registration with Google Credentials API",
+        "Real-time billing and invoice processing engine",
+        "Seller performance analytics and activity tracking",
+        "Cloud-synced offline-first database architecture"
       ],
       "github": "",
       "demo": ""
@@ -131,23 +145,22 @@
       "company": "2is Company",
       "period": "07/2023 – 02/2024",
       "tasks": [
-        "Designed and developed two Android applications from scratch: <strong>Medical Sessions App (DrAiA)</strong> and <strong>Seller Management App (OptPos)</strong>",
-        "Maintained and enhanced an existing Optical Products Search App for medical lenses",
-        "Implemented clean, scalable solutions using <strong>multimodule architecture</strong> and product flavors",
-        "Applied Kotlin, MVVM, Clean Architecture, Room, MySQL, Paging, Coroutines, Flow, and Firebase",
-        "Enabled treatment sharing via WhatsApp as PDF or images"
+        "Designed and developed **Medical Sessions App (DrAiA)** and **Seller Management App (OptPos)** from scratch",
+        "Implemented clean, scalable solutions using **multimodule architecture** and product flavors",
+        "Applied Kotlin, MVVM, Clean Architecture, Room, MySQL, Paging, Coroutines, and Flow",
+        "Engineered automated PDF/Image report generation for instant medical record sharing",
+        "Maintained existing search engine apps with high performance and Paging support"
       ]
     },
     {
       "role": "Freelance Android Developer",
-      "company": "Remote",
+      "company": "Self-Employed",
       "period": "2024",
       "tasks": [
-        "Developed a complete <strong>Employee Attendance Management System</strong> with Excel integration",
-        "Integrated Apache POI for importing/exporting attendance records with validation logic",
-        "Built features for check-in/out, status tracking (Present, Absent, Late), and detailed reporting",
-        "Utilized StateFlow for reactive UI updates and SafeArgs for navigation",
-        "Designed dynamic UIs with RecyclerView and custom adapters"
+        "Developed a complete **Employee Attendance Management System** with complex Excel integration",
+        "Built validation engines for data import using Apache POI with detailed rejection reporting",
+        "Utilized reactive state management (StateFlow) and SafeArgs for crash-resistant navigation",
+        "Designed and implemented configurable business logic for holiday and weekend working-day calculations"
       ]
     }
   ],
@@ -156,21 +169,21 @@
     "cards": [
       {
         "title": "Bachelor's Degree, Faculty of Business",
-        "period": "Graduated",
+        "period": "Ain Shams University",
         "icon": "fas fa-graduation-cap",
         "details": [
-          "Ain Shams University, Egypt"
+          "Focused on business logic and organizational systems",
+          "Foundation for developing enterprise retail and POS solutions"
         ]
       },
       {
-        "title": "Android Software Engineering",
-        "period": "Continuous",
+        "title": "Mobile Software Engineering",
+        "period": "Specialized Path",
         "icon": "fas fa-laptop-code",
         "details": [
-          "Specialized in Kotlin & Modern Android Development",
-          "Deep focus on Clean Architecture and Solid Principles",
-          "Advanced state management with Coroutines and Flow",
-          "Expertise in local persistence with Room and NoSQL"
+          "Mastery of Kotlin & Modern Android Development",
+          "Advanced focus on Clean Architecture, DDD, and SOLID",
+          "Specialization in offline-first systems and reactive state logic"
         ]
       }
     ]
