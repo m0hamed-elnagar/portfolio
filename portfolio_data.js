@@ -39,7 +39,9 @@ class PortfolioDataManager {
   }
 
   renderAbout(about) {
-    if (this.aboutImage) this.aboutImage.src = about.image;
+    if (this.aboutImage) {
+      this.aboutImage.src = about.image;
+    }
     if (this.aboutContainer) {
       this.aboutContainer.innerHTML = about.paragraphs.map(p => `<p>${p}</p>`).join('');
     }
@@ -78,7 +80,9 @@ class PortfolioDataManager {
   }
 
   renderEducation(education) {
-    if (this.educationIntro) this.educationIntro.innerHTML = `<p>${education.intro}</p>`;
+    if (this.educationIntro) {
+      this.educationIntro.innerHTML = `<p>${education.intro}</p>`;
+    }
     if (this.educationGrid) {
       this.educationGrid.innerHTML = '';
       education.cards.forEach((card, index) => {
@@ -98,35 +102,41 @@ class PortfolioDataManager {
   renderPersonal(personal) {
     if (this.logoElements) this.logoElements.forEach(el => el.textContent = personal.logoName || personal.name);
     if (this.heroSubtitle) this.heroSubtitle.textContent = personal.heroSubtitle;
+    
     if (this.footerLinks) {
-      this.footerLinks.innerHTML = `
-        <a href="${personal.github}" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="${personal.linkedin}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="${personal.telegram}" target="_blank"><i class="fab fa-telegram"></i></a>
-        <a href="${personal.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:${personal.email}"><i class="fas fa-envelope"></i></a>
-      `;
+        let footerHtml = '';
+        if (personal.github && personal.github !== '#') footerHtml += `<a href="${personal.github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>`;
+        if (personal.linkedin && personal.linkedin !== '#') footerHtml += `<a href="${personal.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>`;
+        if (personal.telegram && personal.telegram !== '#') footerHtml += `<a href="${personal.telegram}" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>`;
+        if (personal.whatsapp && personal.whatsapp !== '#') footerHtml += `<a href="${personal.whatsapp}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>`;
+        if (personal.facebook && personal.facebook !== '#') footerHtml += `<a href="${personal.facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>`;
+        if (personal.email && personal.email !== '#') footerHtml += `<a href="mailto:${personal.email}" title="Email"><i class="fas fa-envelope"></i></a>`;
+        this.footerLinks.innerHTML = footerHtml;
     }
   }
 
   renderContact(personal) {
     if (!this.contactContainer) return;
+
+    let actionsHtml = '';
+    if (personal.email && personal.email !== '#') {
+        actionsHtml += `<a href="mailto:${personal.email}" class="action-btn email"><i class="fas fa-envelope"></i> <span>Email</span></a>`;
+    }
+    if (personal.whatsapp && personal.whatsapp !== '#') {
+        actionsHtml += `<a href="${personal.whatsapp}" target="_blank" class="action-btn whatsapp"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>`;
+    }
+
+    let socialsHtml = '';
+    if (personal.linkedin && personal.linkedin !== '#') socialsHtml += `<a href="${personal.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>`;
+    if (personal.github && personal.github !== '#') socialsHtml += `<a href="${personal.github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>`;
+    if (personal.facebook && personal.facebook !== '#') socialsHtml += `<a href="${personal.facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>`;
+    if (personal.telegram && personal.telegram !== '#') socialsHtml += `<a href="${personal.telegram}" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>`;
+
     this.contactContainer.innerHTML = `
       <div class="contact-bar" data-aos="fade-up">
-          <div class="contact-actions">
-              <a href="mailto:${personal.email}" class="action-btn email">
-                  <i class="fas fa-envelope"></i> <span>Send Email</span>
-              </a>
-              <a href="${personal.whatsapp}" target="_blank" class="action-btn whatsapp">
-                  <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
-              </a>
-          </div>
+          <div class="contact-actions">${actionsHtml}</div>
           <div class="contact-divider"></div>
-          <div class="contact-socials">
-              <a href="${personal.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="${personal.github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="${personal.facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-          </div>
+          <div class="contact-socials">${socialsHtml}</div>
           <div class="contact-meta">
               <span><i class="fas fa-map-marker-alt"></i> ${personal.location}</span>
           </div>
