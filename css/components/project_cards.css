@@ -1,0 +1,251 @@
+.category-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.category-desc {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: var(--light-text);
+}
+
+.projects-wrapper {
+  position: relative;
+  margin: 0 24px;
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  padding: 24px 12px;
+  margin-bottom: 80px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  align-items: flex-start;
+}
+
+.projects-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+  margin: 150px;
+  background: var(--light-gray);
+  border-radius: 12px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg,var(--primary-color),var(--primary-dark));
+  border-radius: 12px;
+}
+
+.card {
+  position: relative;
+  background:var(--gradient-background);
+  border: var(--border-general);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-project-card);
+  transition: all 0.4s ease;
+  min-width: 320px;
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  opacity: 0.25;
+  filter: blur(45px);
+  z-index: 0;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-project-card-hover);
+}
+
+.project-image {
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.project-image:hover img {
+  transform: scale(1.02);
+  filter: brightness(.95);
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  background: var(--primary-dark);
+  transform: scale(1.2);
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image:hover .slider-arrows {
+  opacity: 1;
+}
+
+/* Auto-play controls */
+.slider-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image:hover .slider-controls {
+  opacity: 1;
+}
+
+.project-content {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.project-title h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--light-text);
+}
+
+.toggle-arrow {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform .28s ease;
+  color: var(--primary-dark);
+  font-size: 1.9rem;
+  transform-origin: center;
+}
+
+.card.open .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+/* details area (collapsible) */
+.details {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  background: var(--inner-details-background);
+  border-radius: 24px;
+  transition: max-height .36s ease, padding .28s ease;
+  flex-shrink: 0;
+}
+
+.details-inner {
+  padding: 14px 0;
+  color: var(--light-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-features {
+  margin: 8px 0 0 16px;
+  padding: 0;
+}
+
+.project-features li {
+  margin: 6px 0;
+}
+
+.project-tags {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  background: var(--project-tags-background);
+  border: var(--border-project-tags);
+  color: var(--light-text);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.project-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-items: auto;
+  justify-content: space-between;
+}

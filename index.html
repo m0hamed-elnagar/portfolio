@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ramzy Ahmed | Android & Flutter Developer</title>
+    <meta name="description" content="Professional Android and Flutter Developer.
+        Specialized in building high-performance mobile apps using Kotlin,
+        Java, and Dart with a focus on clean architecture, UI/UX, and scalability.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+        media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/layout/header_nav.css">
+    <link rel="stylesheet" href="css/layout/sections_base.css">
+    <link rel="stylesheet" href="css/components/skills_cards.css">
+    <link rel="stylesheet" href="css/components/project_cards.css">
+    <link rel="stylesheet" href="css/components/dialog_modal.css">
+    <link rel="stylesheet" href="css/components/timeline.css">
+    <link rel="stylesheet" href="css/components/form_contact.css">
+    <link rel="stylesheet" href="css/components/theme_toggle.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/utilities/animations.css">
+    <link rel="stylesheet" href="css/media_queries/responsive.css">
+
+    <link rel="sitemap" type="application/xml" title="sitemap" href="https://ramzy-ahmed.github.io/sitemap.xml">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="icon" type="image/png" sizes="96x96" href="https://res.cloudinary.com/ddfpaqagg/image/upload/v1753516906/favicon-96x96_jdq56m.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/ddfpaqagg/image/upload/v1753516906/apple-touch-icon_xfysy1.png">
+    
+    <meta name="theme-color" content="#2196f3">
+</head>
+
+<body>
+    <main class="container">
+        <section class="header-section">
+            <div class="tech-grid"></div>
+            <div class="hero-glow"></div>
+            <div class="decoration dotted-circle-top"></div>
+            <div class="decoration solid-circle-bottom"></div>
+            <div class="decoration glowing-line"></div>
+
+            <section class="main-navbar">
+                <nav>
+                    <h1 class="logo">Ramzy Ahmed</h1>
+                    <div class="desktop-menu nav-links">
+                        <a href="index.html" class="active">Home</a>
+                        <a href="#person">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#education">Education</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <button class="mobile-menu-button" title="Menu" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="mobile-menu nav-links">
+                        <a href="index.html" class="active">Home</a>
+                        <a href="#person">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#education">Education</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </nav>
+            </section>
+
+            <section class="hero-layout">
+                <div class="header-content">
+                    <div class="dynamic-text-wrapper">
+                        <h2 class="typed-text"><span class="words" id="typed-text"></span></h2>
+                    </div>
+                    <p class="subtitle">
+                        Passionate Mobile Developer with expertise in Android (Kotlin & Java)
+                        and Flutter, building smooth and intuitive cross-platform applications.
+                    </p>
+                    <div class="header-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="image-rings"><span></span><span></span></div>
+                    <div class="circle-bg"></div>
+                    <img src="https://res.cloudinary.com/ddfpaqagg/image/upload/v1766218199/Ramzy-Ahmed-Mobile-App-Developer-color_ow8ehu.webp" alt="Ramzy Ahmed" class="hero-img" loading="lazy"/>
+                </div>
+            </section>
+        </section>
+
+        <section id="person" class="section">
+            <h2 class="section-title" data-aos="fade-up"><span>01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-left">
+                    <img id="about-image-dynamic" src="" loading="lazy" alt="Portrait">
+                </div>
+                <div class="about-text" id="about-dynamic-content" data-aos="fade-right">
+                    <!-- About content loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title" data-aos="fade-up"><span>02.</span> Skills</h2>
+            <div class="skills-container" id="skills-container">
+                <!-- Skills loaded dynamically -->
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title" data-aos="fade-up"><span>03.</span> Projects</h2>
+            <dialog id="imageDialog">
+                <div class="modal-content">
+                    <img class="modal-image" id="modalImage" src="" alt="Enlarged project image">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                </div>
+            </dialog>
+
+            <div class="projects-category" data-aos="fade-up">
+                <h3 class="category-title">Android Projects</h3>
+                <div class="projects-wrapper">
+                    <div class="projects-container android-projects" data-category="android"></div>
+                    <div class="scroll-btn-container">
+                        <button class="scroll-btn left" id="scroll-left-android-projects" title="Left">&#10094;</button>
+                        <button class="scroll-btn right" id="scroll-right-android-projects" title="Right">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-category" data-aos="fade-up">
+                <h3 class="category-title">Flutter Projects</h3>
+                <div class="projects-wrapper">
+                    <div class="projects-container flutter-projects" data-category="flutter"></div>
+                    <div class="scroll-btn-container">
+                        <button class="scroll-btn left" id="scroll-left-flutter-projects" title="Left">&#10094;</button>
+                        <button class="scroll-btn right" id="scroll-right-flutter-projects" title="Right">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title" data-aos="fade-up"><span>04.</span> Experience</h2>
+            <div class="timeline" id="experience-timeline">
+                <!-- Experience loaded dynamically -->
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title" data-aos="fade-up"><span>05.</span> Education</h2>
+            <div class="education-intro" id="education-intro" data-aos="fade-up"></div>
+            <div class="education-grid" id="education-grid" data-aos="fade-up"></div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title" data-aos="fade-up"><span>06.</span> Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-up">
+                    <div class="contact-details">
+                        <!-- Contact details loaded dynamically -->
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xldbyewj" method="post" data-aos="fade-right">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder=" " rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary send-btn">
+                        <i class="fas fa-paper-plane"></i>Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h4>Let's create something amazing together!</h4>
+            <div class="footer-links">
+                <!-- Footer links loaded dynamically -->
+            </div>
+            <p class="copyright">&copy;2025 Ramzy Ahmed. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" title="Theme" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+    <script src="project_management.js" defer></script>
+    <script src="portfolio_data.js" defer></script>
+    <script src="mobile_menu.js" defer></script>
+    <script src="main.js" defer></script>
+</body>
+</html>

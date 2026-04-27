@@ -1,0 +1,271 @@
+/* لابتوب 14 بوصة و 15.6 بوصة */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .header-content,
+  .hero-image-container {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 370px;
+    height: 370px;
+  }
+
+  .circle-bg {
+    width: 440px;
+    height: 440px;
+  }
+
+  .image-rings {
+    width: 465px;
+    height: 465px;
+  }
+
+  .about-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-img);
+  }
+}
+
+/* landscape تابلت أفقي  */
+@media (min-width: 769px) and (max-width: 991px) {
+
+  .header-content,
+  .hero-image-container {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 380px;
+    height: 380px;
+  }
+
+  .circle-bg {
+    width: 450px;
+    height: 450px;
+  }
+
+  .image-rings {
+    width: 480px;
+    height: 480px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .section {
+    padding: 24px;
+    margin: auto;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    flex-shrink: 0;
+    margin: 1rem;
+  }
+
+  .about-image img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-img);
+  }
+}
+
+/* تابلت عمودي / موبايل كبير  */
+@media(max-width:768px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .section {
+    padding: 20px 12px;
+  }
+
+  .section-title span {
+    margin-right: 6px;
+  }
+
+  .section-title::after {
+    margin-left: 12px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .header-content {
+    width: 100%;
+  }
+
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 16px;
+    min-height: auto;
+  }
+
+  .header-content,
+  .hero-image-container {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .glowing-line,
+  .neon-line {
+    display: none;
+  }
+
+  .tech-grid {
+    opacity: 0.5;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-content {
+    padding: 30px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    flex-shrink: 0;
+    margin: 1rem;
+  }
+
+  .project-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .about-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -30px;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .scroll-btn-container {
+    display: none;
+  }
+
+  .projects-wrapper {
+    margin: 0;
+  }
+
+  .projects-container {
+    gap: 10px;
+    padding: 25px 0px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    min-width: 300px;
+    max-width: 320px;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .project-title h3 {
+    font-size: 1.2rem;
+  }
+
+  .demo {
+    margin-left: 0px;
+  }
+
+  .slider-controls {
+    opacity: 1;
+  }
+
+  .projects-container::-webkit-scrollbar-track {
+    margin: 50px;
+  }
+
+  .education-grid {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 15px;
+  }
+
+  .education-card {
+    padding: 30px 25px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .footer-links a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .theme-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}

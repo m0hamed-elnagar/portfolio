@@ -1,0 +1,120 @@
+/* Dark Theme Variables */
+:root {
+    /* Primary Colors */
+    --primary-color: #7b68ee; 
+    --primary-dark: #e91e63; 
+    --primary-pink: #ff69b4; 
+    --secondary-color: #00b8d4;
+
+    /* Keyword Colors */
+    --keyword-master-color: #d4c8ff;
+    --keyword-master-background: rgba(123, 104, 238, 0.15);
+    --keyword-master-border-color: rgba(123, 104, 238, 0.3);
+    --keyword-advanced-color: #ff99cc;
+    --keyword-advanced-background: rgba(233, 30, 99, 0.15);
+    --keyword-advanced-border-color: rgba(233, 30, 99, 0.3);
+    --keyword-intermediate-color: #b3e5fc;
+    --keyword-intermediate-background: rgba(0, 184, 212, 0.15);
+    --keyword-intermediate-border-color: rgba(0, 184, 212, 0.3);
+
+    /* Background Colors */
+    --main-background: #0b0f1a; 
+    --project-tags-background: rgba(123, 104, 238, 0.2);
+    --glass-background: rgba(76, 92, 139, 0.09);
+    --glass-bg-mobile-menu: rgba(20, 20, 20, 0.95);
+    --gradient-background: linear-gradient(135deg, rgba(123, 104, 238, 0.15), rgba(233, 30, 99, 0.15));
+    --controrls-btn-background: rgba(0, 0, 0, 0.6);
+    --controrls-btn-background-hover: rgba(0, 0, 0, 0.85);
+    --inner-details-background: rgba(255, 255, 255, 0.1);
+
+    /* Text Colors */
+    --dark-text: #f0f0f0;
+    --light-text: #ffffff;
+    --light-gray: rgba(255, 255, 255, 0.25);
+    --grid-gray: rgba(255, 255, 255, 0.1);
+
+    /* Rings And Line Colors */
+    --rings-1: rgba(123, 104, 238, 0.6);
+    --rings-2: rgba(233, 30, 99, 0.6);
+    --glowing-line: linear-gradient(90deg, #3498db, #e91e63);
+
+    /* Shadow Colors */
+    --shadow-img: 0 0 50px rgba(50, 20, 150, 0.8);
+    --shadow-btn-primary: 0 6px 20px rgba(233, 30, 99, 0.45);
+    --shadow-btn-primary-hover: 0 12px 30px rgba(233, 30, 99, 0.45);
+    --shadow-btn-secondary: 0 6px 20px rgba(38, 222, 129, 0.15);
+    --shadow-btn-secondary-hover: 0 12px 30px rgba(38, 222, 129, 0.15);
+    --shadow-skill-category: 0 8px 20px rgba(0, 0, 0, 0.3);
+    --shadow-skill-category-hover: 0 30px 70px rgba(0, 0, 0, 0.55);
+    --shadow-keyword-hover: 0 8px 20px rgba(123, 104, 238, 0.4);
+    --shadow-project-card: 0 12px 35px rgba(0, 0, 0, 0.2);
+    --shadow-project-card-hover: 0 20px 45px rgba(0, 0, 0, 0.4);
+    --shadow-timeline-circle: 0 0 0 5px rgba(255, 105, 180, 0.25);
+
+    /* Border Colors*/
+    --border-img: 2px solid rgba(123, 104, 238, 0.6);
+    --border-btn: 2px solid var(--primary-color);
+    --border-btn-github: 1.5px solid rgba(255, 255, 255, 0.25);
+    --border-project-tags: 1.5px solid rgba(123, 104, 238, 0.4);
+    --border-general: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Light Theme Variables */
+[data-theme='light'] {
+    /* Primary Colors */
+    --primary-color: #2d00f7;
+    --primary-dark: #e91e63;
+    --secondary-color: #00b8d4;
+
+    /* Keyword Colors */
+    --keyword-master-color: #5a4fc8; 
+    --keyword-master-background: rgba(123, 104, 238, 0.08);
+    --keyword-master-border-color: rgba(123, 104, 238, 0.25);
+    --keyword-advanced-color: #c2185b; 
+    --keyword-advanced-background: rgba(233, 30, 99, 0.08);
+    --keyword-advanced-border-color: rgba(233, 30, 99, 0.25);
+    --keyword-intermediate-color: #0277bd;
+    --keyword-intermediate-background: rgba(0, 184, 212, 0.08);
+    --keyword-intermediate-border-color: rgba(0, 184, 212, 0.25);
+
+    /* Background Colors */
+    --main-background: #f8fafc; 
+    --project-tags-background: rgba(123, 104, 238, 0.1);
+    --glass-background: rgba(255, 255, 255, 0.85);
+    --glass-bg-mobile-menu: rgba(255, 255, 255, 0.98);
+    --gradient-background: linear-gradient(135deg, rgba(123, 104, 238, 0.12), rgba(233, 30, 99, 0.12));
+    --controrls-btn-background: rgba(255, 255, 255, 0.9);
+    --controrls-btn-background-hover: rgba(255, 255, 255, 0.98);
+    --inner-details-background: rgba(0, 0, 0, 0.06);
+
+    /* Text Colors */
+    --dark-text: #334155; 
+    --light-text: #1e293b;
+    --light-gray: rgba(0, 0, 0, 0.09);
+    --grid-gray: rgba(0, 0, 0, 0.02);
+    
+    /* Rings And Line Colors */
+    --rings-1: rgba(123, 104, 238, 0.4);
+    --rings-2: rgba(233, 30, 99, 0.4);
+    --glowing-line: linear-gradient(90deg, #3498db, #e91e63);
+    
+    /* Shadow Colors */
+    --shadow-img: 0 0 50px rgba(50, 20, 150, 0.8);
+    --shadow-btn-primary: 0 4px 15px rgba(233, 30, 99, 0.25);
+    --shadow-btn-primary-hover: 0 8px 25px rgba(233, 30, 99, 0.25);
+    --shadow-btn-secondary: 0 4px 15px rgba(38, 222, 129, 0.1);
+    --shadow-btn-secondary-hover: 0 8px 25px rgba(38, 222, 129, 0.1);
+    --shadow-skill-category: 0 6px 16px rgba(0, 0, 0, 0.08);
+    --shadow-skill-category-hover: 0 20px 50px rgba(0, 0, 0, 0.2);
+    --shadow-keyword-hover: 0 6px 16px rgba(123, 104, 238, 0.25);
+    --shadow-project-card: 0 8px 25px rgba(0, 0, 0, 0.06);
+    --shadow-project-card-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+    --shadow-timeline-circle: 0 0 0 4px rgba(255, 105, 180, 0.15);
+
+    /* Border Colors*/
+    --border-img: 2px solid rgba(123, 104, 238, 0.6);
+    --border-btn: 2px solid var(--primary-color);
+    --border-btn-github: 1px solid rgba(0, 0, 0, 0.08);
+    --border-project-tags: 1px solid rgba(123, 104, 238, 0.25);
+    --border-general: 1px solid rgba(0, 0, 0, 0.05);
+}

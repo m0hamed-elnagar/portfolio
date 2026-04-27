@@ -1,0 +1,29 @@
+{
+    "name": "Ramzy Ahmed Portfolio",
+    "short_name": "Ramzy",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0e12f5ff",
+    "description": "Ramzy Ahmed - Android & Flutter Developer specializing in Kotlin, Java, Dart, and Firebase.",
+    "icons": [
+      {
+        "src": "https://res.cloudinary.com/ddfpaqagg/image/upload/v1753516907/web-app-manifest-192x192_i55xzm.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "https://res.cloudinary.com/ddfpaqagg/image/upload/v1753516910/web-app-manifest-512x512_d5u8cv.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "lang": "en",
+    "dir": "ltr",
+    "categories": ["portfolio", "developer", "android", "flutter", "software"],
+    "related_applications": [],
+    "prefer_related_applications": false
+  }
+  

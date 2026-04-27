@@ -1,0 +1,172 @@
+{
+  "personal": {
+    "name": "Ramzy Ahmed",
+    "role": "Mobile App Developer",
+    "location": "Cairo, Egypt",
+    "phone": "+20 1021891394",
+    "email": "ramzy12234@gmail.com",
+    "linkedin": "https://linkedin.com/in/ramzy-ahmed",
+    "github": "https://github.com/ramzy-ahmed",
+    "telegram": "https://t.me/Ramzy_Ahmed_dev",
+    "facebook": "https://www.facebook.com/share/1KgQ8oY7Ud"
+  },
+  "about": {
+    "image": "https://res.cloudinary.com/ddfpaqagg/image/upload/v1766218198/Ramzy-Ahmed-Mobile-App-Developer-portrait_zzaour.webp",
+    "paragraphs": [
+      "<strong>Hello there!</strong> I'm a <span class=\"highlight\">Mobile App Developer</span> with a passion for building beautiful and functional applications that deliver exceptional user experiences.",
+      "With expertise in <span class=\"highlight\">Kotlin</span>, <span class=\"highlight\">Java</span>, and <span class=\"highlight\">Flutter</span>, I specialize in developing robust <strong>Android</strong> and <strong>cross-platform</strong> applications using modern architectures like <span class=\"highlight\">MVVM</span> and <span class=\"highlight\">MVI</span>. My focus is on writing clean, maintainable code while following industry best practices.",
+      "Beyond coding, I'm deeply interested in <span class=\"highlight\">UI/UX design</span> principles and enjoy creating interfaces that are not only visually appealing but also intuitive and accessible to all users.",
+      "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or indulging in my love for photography and travel.",
+      "I'm always eager to take on new challenges and collaborate on exciting projects. Let's connect and create something amazing together!"
+    ]
+  },
+  "skills": [
+    {
+      "category": "Android Development",
+      "icon": "fab fa-android",
+      "items": [
+        { "name": "Kotlin", "level": "Master" },
+        { "name": "Java", "level": "Advanced" },
+        { "name": "Jetpack Compose", "level": "Advanced" },
+        { "name": "XML Layouts", "level": "Advanced" },
+        { "name": "Coroutines", "level": "Advanced" },
+        { "name": "Flow", "level": "Advanced" },
+        { "name": "Room Database", "level": "Advanced" },
+        { "name": "Retrofit", "level": "Advanced" },
+        { "name": "Dagger Hilt", "level": "Advanced" },
+        { "name": "WorkManager", "level": "Advanced" },
+        { "name": "Navigation Component", "level": "Advanced" },
+        { "name": "Clean Architecture", "level": "Advanced" },
+        { "name": "MVVM / MVI", "level": "Advanced" },
+        { "name": "Material Design 3", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "Cross-Platform Development",
+      "icon": "fas fa-layer-group",
+      "items": [
+        { "name": "Flutter", "level": "Advanced" },
+        { "name": "Dart", "level": "Advanced" },
+        { "name": "Bloc / Cubit", "level": "Advanced" },
+        { "name": "Provider", "level": "Advanced" },
+        { "name": "GetX", "level": "Advanced" },
+        { "name": "Riverpod", "level": "Advanced" },
+        { "name": "Flutter Hooks", "level": "Advanced" },
+        { "name": "Method Channels", "level": "Advanced" },
+        { "name": "App Localization", "level": "Advanced" },
+        { "name": "Firebase Auth", "level": "Advanced" },
+        { "name": "Firestore", "level": "Advanced" },
+        { "name": "Cloud Functions", "level": "Advanced" },
+        { "name": "RESTful APIs", "level": "Advanced" },
+        { "name": "Push Notifications", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "Back-End & Tools",
+      "icon": "fas fa-tools",
+      "items": [
+        { "name": "Firebase", "level": "Advanced" },
+        { "name": "Supabase", "level": "Intermediate" },
+        { "name": "Node.js", "level": "Intermediate" },
+        { "name": "Git & GitHub", "level": "Advanced" },
+        { "name": "Docker", "level": "Intermediate" },
+        { "name": "SQLite", "level": "Advanced" },
+        { "name": "Postman", "level": "Advanced" },
+        { "name": "Agile / Scrum", "level": "Advanced" },
+        { "name": "Test Driven Development", "level": "Advanced" }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Freelance Android Developer",
+      "company": "Self-Employed",
+      "period": "02/2023 – Present",
+      "tasks": [
+        "Developed multiple Android apps using <strong>Kotlin</strong> and <strong>Java</strong> tailored to client requirements",
+        "Implemented <strong>MVVM</strong> & <strong>Clean Architecture</strong> to ensure scalability and maintainability",
+        "Integrated <strong>Room Database</strong>, <strong>SQLite</strong>, and <strong>Firebase</strong> for offline-first and real-time functionality",
+        "Worked with <strong>Retrofit</strong> for API integration and <strong>Glide/Picasso</strong> for image handling",
+        "Utilized <strong>Jetpack Components</strong> (LiveData, ViewModel, Navigation, WorkManager) to improve app reliability",
+        "Collaborated closely with UI/UX designers to create responsive, pixel-perfect interfaces",
+        "Optimized app performance, reducing load times and memory usage",
+        "Published apps to <strong>Google Play</strong> and handled versioning, crash reports, and timely updates"
+      ]
+    },
+    {
+      "role": "Freelance Flutter Developer",
+      "company": "Self-Employed",
+      "period": "02/2025 – Present",
+      "tasks": [
+        "Developed cross-platform apps with <strong>Flutter & Dart</strong>, ensuring seamless performance on Android and iOS",
+        "Created modern and adaptive UIs using <strong>Material Design</strong>, <strong>Custom Widgets</strong>, and <strong>Animations</strong>",
+        "Implemented <strong>State Management</strong> solutions such as <strong>Provider</strong>, <strong>Riverpod</strong>, and <strong>Bloc</strong>",
+        "Integrated REST APIs, Firebase Authentication, Firestore, and push notifications",
+        "Worked with <strong>SQLite</strong> and <strong>Shared Preferences</strong> for local data persistence",
+        "Applied <strong>Responsive Design</strong> to support phones and tablets with different screen sizes",
+        "Collaborated with clients in agile workflows, handling sprints, demos, and feedback iterations",
+        "Followed best practices for clean, reusable, and scalable Flutter codebases"
+      ]
+    },
+    {
+      "role": "Android Developer Intern",
+      "company": "CodeAlpha",
+      "period": "04/2025 – 05/2025",
+      "tasks": [
+        "Designed and developed 3 Android applications: Flashcard Quiz, Random Quote Generator, and Fitness Tracker",
+        "Implemented MVVM architecture with Jetpack components (ViewModel, LiveData, Room) for scalable apps",
+        "Integrated SQLite database and RecyclerView for efficient data storage and display",
+        "Applied Material Design principles to create modern, responsive, and engaging UIs",
+        "Practiced clean architecture to ensure maintainable and testable codebases",
+        "Collaborated on version control using Git & GitHub for real-world project workflows",
+        "Gained professional experience working within deadlines and delivering production-ready features"
+      ]
+    }
+  ],
+  "education": {
+    "intro": "As a self-taught Mobile Developer, I’ve committed myself to continuous growth by learning through online courses, official documentation, tutorials, and practical projects. This journey has allowed me to build a solid foundation in Android and Flutter development, while constantly exploring new tools, frameworks, and best practices to enhance my skills. Here’s a summary of my educational journey:",
+    "cards": [
+      {
+        "title": "Self-Taught Mobile Developer",
+        "period": "2023 - Present",
+        "icon": "fas fa-graduation-cap",
+        "details": [
+          "Android development with Kotlin & Java",
+          "Cross-platform mobile development using Flutter & Dart",
+          "Software architecture (MVVM, Clean Architecture, MVI)",
+          "UI/UX principles, prototyping, and responsive design",
+          "Version control with Git & GitHub",
+          "Backend integration with Firebase, REST APIs, SQLite, Room",
+          "Modern development practices (Jetpack Compose, Material Design 3)"
+        ]
+      },
+      {
+        "title": "Online Courses & Certifications",
+        "period": "Ongoing",
+        "icon": "fas fa-laptop-code",
+        "details": [
+          "Flutter & Dart – The Complete Guide (Udemy)",
+          "Kotlin for Android Developers (Coursera)",
+          "Android Jetpack Masterclass (Udemy)",
+          "Clean Architecture & SOLID Principles (Pluralsight)",
+          "Git & GitHub Essentials (LinkedIn Learning)",
+          "UI/UX Design for Mobile Apps (FreeCodeCamp)",
+          "Agile & Scrum Foundations (Coursera)",
+          "Problem Solving & Data Structures (HackerRank / LeetCode practice)"
+        ]
+      },
+      {
+        "title": "Additional Learning",
+        "period": "Continuous",
+        "icon": "fas fa-book",
+        "details": [
+          "Reading official Android & Flutter documentation",
+          "Following Google Developers & Flutter community updates",
+          "Building personal projects to apply new skills",
+          "Practicing algorithmic challenges to improve problem-solving",
+          "Exploring state management in Flutter (Provider, Riverpod, Bloc)"
+        ]
+      }
+    ]
+  }
+}

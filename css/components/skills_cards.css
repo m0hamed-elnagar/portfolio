@@ -1,0 +1,101 @@
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.skill-category {
+  position: relative;
+  background: var(--gradient-background);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: var(--border-general);
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-skill-category);
+  overflow: hidden;
+}
+
+.skill-category::after {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  right: -90px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  opacity: 0.22;
+  filter: blur(45px);
+  z-index: 0;
+}
+
+.skill-category>* {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-category:hover {
+  box-shadow: var(--shadow-skill-category-hover);
+}
+
+.skill-category h3 {
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: var(--border-general);
+  color: var(--light-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.35rem;
+}
+
+.keywords-grid i {
+  font-size: 1.25rem;
+}
+
+.skill-category h3 i {
+  color: var(--primary-color);
+  font-size: 1.35rem;
+}
+
+.keywords-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword {
+  padding: 12px 16px;
+  border-radius:  24px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.keyword:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-keyword-hover);
+}
+
+.keyword.master {
+  background: var(--keyword-master-background);
+  color: var(--keyword-master-color);
+  border-color: var(--keyword-master-border-color);
+}
+
+.keyword.advanced {
+  background: var(--keyword-advanced-background);
+  color: var(--keyword-advanced-color);
+  border-color: var(--keyword-advanced-border-color);
+}
+
+.keyword.intermediate {
+  background: var(--keyword-intermediate-background);
+  color: var(--keyword-intermediate-color);
+  border-color: var(--keyword-intermediate-border-color);
+}
