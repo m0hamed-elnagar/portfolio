@@ -3,6 +3,7 @@ class ProjectManager {
     this.imageModal = document.getElementById('imageDialog');
     this.modalImage = document.getElementById('modalImage');
     this.closeModal = document.getElementById('closeModal');
+    this.projectsRendered = false; // Flag to prevent double rendering
     
     if (!this.imageModal) {
       console.error("⛔ Error: <dialog id='imageDialog'> not found.");
@@ -14,10 +15,12 @@ class ProjectManager {
 
   // Fetches project data and renders all projects
   async fetchAndShowProjects(projectsFile) {
+    // If projects are already rendered (from local data), skip fetching
+    if (this.projectsRendered) return;
+
     const allContainers = document.querySelectorAll('[data-category]');
     
     try {
-      // Show loading state if needed (optional)
       const response = await fetch(projectsFile);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -42,6 +45,8 @@ class ProjectManager {
 
   // Renders projects into their respective containers
   renderProjects(projects) {
+    if (this.projectsRendered) return;
+
     const allContainers = document.querySelectorAll('[data-category]');
     allContainers.forEach(container => {
       container.innerHTML = ''; // Clear loading/error states
@@ -59,6 +64,8 @@ class ProjectManager {
         this.initSlider(card, p.images.length);
       });
     });
+
+    this.projectsRendered = true;
 
     if (window.AOS) {
       window.AOS.refresh();
@@ -152,30 +159,34 @@ class ProjectManager {
     const startAutoPlay = () => {
       if (autoPlayInterval) clearInterval(autoPlayInterval);
       autoPlayInterval = setInterval(nextSlide, 3000);
-      playIcon.className = 'fas fa-pause';
+      if (playIcon) playIcon.className = 'fas fa-pause';
       isPlaying = true;
     };
 
     const stopAutoPlay = () => {
       clearInterval(autoPlayInterval);
       autoPlayInterval = null;
-      playIcon.className = 'fas fa-play';
+      if (playIcon) playIcon.className = 'fas fa-play';
       isPlaying = false;
     };
 
     const toggleAutoPlay = () => isPlaying ? stopAutoPlay() : startAutoPlay();
 
-    nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      nextSlide();
-      if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          nextSlide();
+          if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
+        });
+    }
 
-    prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      prevSlide();
-      if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          prevSlide();
+          if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
+        });
+    }
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', (e) => {
@@ -186,10 +197,12 @@ class ProjectManager {
       });
     });
 
-    playPauseBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleAutoPlay();
-    });
+    if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleAutoPlay();
+        });
+    }
 
     images.forEach(img => {
       img.addEventListener('click', (e) => {
@@ -213,21 +226,25 @@ class ProjectManager {
   openCard(card) {
     const details = card.querySelector('.details');
     const button = card.querySelector('.project-title');
-    details.style.maxHeight = details.scrollHeight + 'px';
-    details.style.padding = '12px 18px';
-    details.setAttribute('aria-hidden', 'false');
-    button.setAttribute('aria-expanded', 'true');
-    card.classList.add('open');
+    if (details && button) {
+        details.style.maxHeight = details.scrollHeight + 'px';
+        details.style.padding = '12px 18px';
+        details.setAttribute('aria-hidden', 'false');
+        button.setAttribute('aria-expanded', 'true');
+        card.classList.add('open');
+    }
   }
 
   closeCard(card) {
     const details = card.querySelector('.details');
     const button = card.querySelector('.project-title');
-    details.style.maxHeight = null;
-    details.style.padding = '0 18px';
-    details.setAttribute('aria-hidden', 'true');
-    button.setAttribute('aria-expanded', 'false');
-    card.classList.remove('open');
+    if (details && button) {
+        details.style.maxHeight = null;
+        details.style.padding = '0 18px';
+        details.setAttribute('aria-hidden', 'true');
+        button.setAttribute('aria-expanded', 'false');
+        card.classList.remove('open');
+    }
   }
 
   // Opens the image modal
@@ -269,6 +286,9 @@ class ProjectManager {
 }
 
 // Initialize the ProjectManager
-const projectManager = new ProjectManager();
+window.projectManager = new ProjectManager();
 const PROJECTS_JSON_URL = "https://gist.githubusercontent.com/ramzy-ahmed/8174f35a6ea699bebef04fe877745899/raw/projects.json?timestamp=" + Date.now();
-projectManager.fetchAndShowProjects(PROJECTS_JSON_URL);
+// Delay slightly to allow local data to load first if it exists
+setTimeout(() => {
+    window.projectManager.fetchAndShowProjects(PROJECTS_JSON_URL);
+}, 100);

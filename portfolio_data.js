@@ -8,6 +8,11 @@ class PortfolioDataManager {
     this.educationGrid = document.getElementById('education-grid');
     this.contactDetails = document.querySelector('.contact-details');
     this.footerLinks = document.querySelector('.footer-links');
+    
+    // Personal Info Elements
+    this.logoElements = document.querySelectorAll('.logo');
+    this.heroName = document.querySelector('.typed-text'); // Typed.js target
+    this.heroSubtitle = document.querySelector('.subtitle');
   }
 
   async loadPortfolioData(dataFile) {
@@ -16,11 +21,16 @@ class PortfolioDataManager {
       if (!response.ok) throw new Error('Failed to load data');
       const data = await response.json();
       
+      if (data.personal) this.renderPersonal(data.personal);
       if (data.about) this.renderAbout(data.about);
       if (data.skills) this.renderSkills(data.skills);
       if (data.experience) this.renderExperience(data.experience);
       if (data.education) this.renderEducation(data.education);
-      if (data.personal) this.renderPersonal(data.personal);
+
+      // Projects are handled by ProjectManager, but we pass data if available
+      if (data.projects && window.projectManager) {
+        window.projectManager.renderProjects(data.projects);
+      }
 
       // Refresh AOS after all dynamic content is rendered
       if (window.AOS) {
@@ -112,6 +122,16 @@ class PortfolioDataManager {
   }
 
   renderPersonal(personal) {
+    // Update Logo
+    if (this.logoElements) {
+      this.logoElements.forEach(el => el.textContent = personal.logoName || personal.name);
+    }
+
+    // Update Hero Subtitle
+    if (this.heroSubtitle) {
+      this.heroSubtitle.textContent = personal.heroSubtitle;
+    }
+
     if (this.contactDetails) {
       this.contactDetails.innerHTML = `
         <div class="content-item">
@@ -150,6 +170,6 @@ class PortfolioDataManager {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const portfolioData = new PortfolioDataManager();
-  portfolioData.loadPortfolioData('data.json');
+  window.portfolioData = new PortfolioDataManager();
+  window.portfolioData.loadPortfolioData('data.json');
 });

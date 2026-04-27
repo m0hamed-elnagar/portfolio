@@ -1,170 +1,175 @@
 {
   "personal": {
-    "name": "Ramzy Ahmed",
-    "role": "Mobile App Developer",
+    "name": "Mohamed Elnagar",
+    "logoName": "Mohamed Elnagar",
+    "role": "Android Developer",
     "location": "Cairo, Egypt",
-    "phone": "+20 1021891394",
-    "email": "ramzy12234@gmail.com",
-    "linkedin": "https://linkedin.com/in/ramzy-ahmed",
-    "github": "https://github.com/ramzy-ahmed",
-    "telegram": "https://t.me/Ramzy_Ahmed_dev",
-    "facebook": "https://www.facebook.com/share/1KgQ8oY7Ud"
+    "phone": "+20 101 771 3257",
+    "email": "mohamed.3lnagar@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mohamed-elnagar-b62802231",
+    "github": "https://github.com/m0hamed-elnagar",
+    "telegram": "#",
+    "facebook": "#",
+    "heroSubtitle": "Skilled Android Developer with hands-on experience delivering production-grade applications from concept through deployment. Proficient in Kotlin, Room, Paging, Hilt, and Firebase services."
   },
   "about": {
-    "image": "https://res.cloudinary.com/ddfpaqagg/image/upload/v1766218198/Ramzy-Ahmed-Mobile-App-Developer-portrait_zzaour.webp",
+    "image": "portfolio/profile_pic.jpg",
     "paragraphs": [
-      "<strong>Hello there!</strong> I'm a <span class=\"highlight\">Mobile App Developer</span> with a passion for building beautiful and functional applications that deliver exceptional user experiences.",
-      "With expertise in <span class=\"highlight\">Kotlin</span>, <span class=\"highlight\">Java</span>, and <span class=\"highlight\">Flutter</span>, I specialize in developing robust <strong>Android</strong> and <strong>cross-platform</strong> applications using modern architectures like <span class=\"highlight\">MVVM</span> and <span class=\"highlight\">MVI</span>. My focus is on writing clean, maintainable code while following industry best practices.",
-      "Beyond coding, I'm deeply interested in <span class=\"highlight\">UI/UX design</span> principles and enjoy creating interfaces that are not only visually appealing but also intuitive and accessible to all users.",
-      "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or indulging in my love for photography and travel.",
-      "I'm always eager to take on new challenges and collaborate on exciting projects. Let's connect and create something amazing together!"
+      "<strong>Hello!</strong> I'm <span class=\"highlight\">Mohamed Elnagar</span>, a skilled Android Developer dedicated to building high-performance, production-grade mobile applications.",
+      "With expertise in <span class=\"highlight\">Kotlin</span>, <span class=\"highlight\">Jetpack Components</span>, and <span class=\"highlight\">Hilt</span>, I specialize in delivering robust solutions from concept to deployment. I have a strong focus on <span class=\"highlight\">Clean Architecture</span>, MVVM, and writing maintainable, testable code.",
+      "My experience includes developing complex systems like medical record management, retail POS solutions, and productivity tools. I am passionate about continuous learning and staying ahead of modern Android development trends like <span class=\"highlight\">Coroutines (Flow/StateFlow)</span> and <span class=\"highlight\">Paging</span>.",
+      "When I'm not coding, I focus on software engineering best practices, exploring multimodule architectures, and refining user experiences through intuitive design and performance optimization."
     ]
   },
   "skills": [
     {
-      "category": "Android Development",
+      "category": "Android Core",
       "icon": "fab fa-android",
       "items": [
         { "name": "Kotlin", "level": "Master" },
         { "name": "Java", "level": "Advanced" },
-        { "name": "Jetpack Compose", "level": "Advanced" },
-        { "name": "XML Layouts", "level": "Advanced" },
-        { "name": "Coroutines", "level": "Advanced" },
-        { "name": "Flow", "level": "Advanced" },
-        { "name": "Room Database", "level": "Advanced" },
-        { "name": "Retrofit", "level": "Advanced" },
-        { "name": "Dagger Hilt", "level": "Advanced" },
-        { "name": "WorkManager", "level": "Advanced" },
-        { "name": "Navigation Component", "level": "Advanced" },
+        { "name": "Android SDK", "level": "Master" },
+        { "name": "Coroutines & Flow", "level": "Advanced" },
+        { "name": "Jetpack Components", "level": "Master" },
+        { "name": "Dependency Injection (Hilt)", "level": "Advanced" },
         { "name": "Clean Architecture", "level": "Advanced" },
-        { "name": "MVVM / MVI", "level": "Advanced" },
-        { "name": "Material Design 3", "level": "Advanced" }
+        { "name": "MVVM / MVI", "level": "Advanced" }
       ]
     },
     {
-      "category": "Cross-Platform Development",
-      "icon": "fas fa-layer-group",
+      "category": "Data & Persistence",
+      "icon": "fas fa-database",
       "items": [
-        { "name": "Flutter", "level": "Advanced" },
-        { "name": "Dart", "level": "Advanced" },
-        { "name": "Bloc / Cubit", "level": "Advanced" },
-        { "name": "Provider", "level": "Advanced" },
-        { "name": "GetX", "level": "Advanced" },
-        { "name": "Riverpod", "level": "Advanced" },
-        { "name": "Flutter Hooks", "level": "Advanced" },
-        { "name": "Method Channels", "level": "Advanced" },
-        { "name": "App Localization", "level": "Advanced" },
-        { "name": "Firebase Auth", "level": "Advanced" },
-        { "name": "Firestore", "level": "Advanced" },
-        { "name": "Cloud Functions", "level": "Advanced" },
-        { "name": "RESTful APIs", "level": "Advanced" },
-        { "name": "Push Notifications", "level": "Advanced" }
+        { "name": "Room Persistence", "level": "Master" },
+        { "name": "Paging 3", "level": "Advanced" },
+        { "name": "SQLite / MySQL", "level": "Advanced" },
+        { "name": "DataStore / SharedPreferences", "level": "Advanced" },
+        { "name": "NoSQL Persistence", "level": "Advanced" },
+        { "name": "JSON Serialization", "level": "Advanced" }
       ]
     },
     {
-      "category": "Back-End & Tools",
+      "category": "Tools & Integrations",
       "icon": "fas fa-tools",
       "items": [
-        { "name": "Firebase", "level": "Advanced" },
-        { "name": "Supabase", "level": "Intermediate" },
-        { "name": "Node.js", "level": "Intermediate" },
+        { "name": "Firebase Services", "level": "Advanced" },
         { "name": "Git & GitHub", "level": "Advanced" },
-        { "name": "Docker", "level": "Intermediate" },
-        { "name": "SQLite", "level": "Advanced" },
-        { "name": "Postman", "level": "Advanced" },
-        { "name": "Agile / Scrum", "level": "Advanced" },
-        { "name": "Test Driven Development", "level": "Advanced" }
+        { "name": "WorkManager", "level": "Advanced" },
+        { "name": "Navigation Component", "level": "Advanced" },
+        { "name": "Apache POI", "level": "Advanced" },
+        { "name": "Google Credentials API", "level": "Advanced" },
+        { "name": "Unit/Integration Testing", "level": "Advanced" }
       ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Fard (Islamic Productivity App)",
+      "category": "android",
+      "description": "A comprehensive spiritual tool designed for tracking obligations and spiritual growth using Modular Clean Architecture and Domain-Driven Design.",
+      "images": ["portfolio/profile_pic.jpg"],
+      "tech": ["Kotlin", "Modular Architecture", "DDD", "NoSQL", "WorkManager", "Material 3"],
+      "features": [
+        "Offline-First Data Engine with NoSQL persistence",
+        "Immersive Quran Reader with interactive progress tracking",
+        "Global Time Automation for prayer times and notifications",
+        "Background Audio System with lock-screen controls"
+      ],
+      "github": "https://github.com/m0hamed-elnagar",
+      "demo": ""
+    },
+    {
+      "title": "DrAiA (Medical Sessions App)",
+      "category": "android",
+      "description": "An Android application developed for managing patient records, exams, diagnoses, and treatments, specifically for ophthalmology.",
+      "images": ["portfolio/profile_pic.jpg"],
+      "tech": ["Kotlin", "MVVM", "Clean Architecture", "Room", "Paging", "Coroutines"],
+      "features": [
+        "Patient record management and history tracking",
+        "Ophthalmology-specific data entry (lens dimensions)",
+        "Share treatments via WhatsApp as PDF or images",
+        "Multimodule architecture with product flavors"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "OptPos (Seller Management)",
+      "category": "android",
+      "description": "Managed sellers' activities, billing, and registration with secure Google Sign-In integration.",
+      "images": ["portfolio/profile_pic.jpg"],
+      "tech": ["Kotlin", "Google Sign-In", "Billing API", "Room", "Firebase"],
+      "features": [
+        "Seller activity tracking and performance metrics",
+        "Billing and invoice processing",
+        "Secure registration and login with Google",
+        "Real-time data synchronization"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Employee Attendance System",
+      "category": "android",
+      "description": "Freelance project for streamlining employee attendance tracking with full Excel integration for data portability.",
+      "images": ["portfolio/profile_pic.jpg"],
+      "tech": ["Kotlin", "Apache POI", "StateFlow", "SafeArgs", "Room"],
+      "features": [
+        "Excel data import/export for reporting",
+        "Detailed attendance status tracking (Present, Absent, Late)",
+        "Configurable weekends and holidays",
+        "Color-coded UI indicators for status"
+      ],
+      "github": "",
+      "demo": ""
     }
   ],
   "experience": [
     {
+      "role": "Android Developer",
+      "company": "2is Company",
+      "period": "07/2023 – 02/2024",
+      "tasks": [
+        "Designed and developed two Android applications from scratch: <strong>Medical Sessions App (DrAiA)</strong> and <strong>Seller Management App (OptPos)</strong>",
+        "Maintained and enhanced an existing Optical Products Search App for medical lenses",
+        "Implemented clean, scalable solutions using <strong>multimodule architecture</strong> and product flavors",
+        "Applied Kotlin, MVVM, Clean Architecture, Room, MySQL, Paging, Coroutines, Flow, and Firebase",
+        "Enabled treatment sharing via WhatsApp as PDF or images"
+      ]
+    },
+    {
       "role": "Freelance Android Developer",
-      "company": "Self-Employed",
-      "period": "02/2023 – Present",
+      "company": "Remote",
+      "period": "2024",
       "tasks": [
-        "Developed multiple Android apps using <strong>Kotlin</strong> and <strong>Java</strong> tailored to client requirements",
-        "Implemented <strong>MVVM</strong> & <strong>Clean Architecture</strong> to ensure scalability and maintainability",
-        "Integrated <strong>Room Database</strong>, <strong>SQLite</strong>, and <strong>Firebase</strong> for offline-first and real-time functionality",
-        "Worked with <strong>Retrofit</strong> for API integration and <strong>Glide/Picasso</strong> for image handling",
-        "Utilized <strong>Jetpack Components</strong> (LiveData, ViewModel, Navigation, WorkManager) to improve app reliability",
-        "Collaborated closely with UI/UX designers to create responsive, pixel-perfect interfaces",
-        "Optimized app performance, reducing load times and memory usage",
-        "Published apps to <strong>Google Play</strong> and handled versioning, crash reports, and timely updates"
-      ]
-    },
-    {
-      "role": "Freelance Flutter Developer",
-      "company": "Self-Employed",
-      "period": "02/2025 – Present",
-      "tasks": [
-        "Developed cross-platform apps with <strong>Flutter & Dart</strong>, ensuring seamless performance on Android and iOS",
-        "Created modern and adaptive UIs using <strong>Material Design</strong>, <strong>Custom Widgets</strong>, and <strong>Animations</strong>",
-        "Implemented <strong>State Management</strong> solutions such as <strong>Provider</strong>, <strong>Riverpod</strong>, and <strong>Bloc</strong>",
-        "Integrated REST APIs, Firebase Authentication, Firestore, and push notifications",
-        "Worked with <strong>SQLite</strong> and <strong>Shared Preferences</strong> for local data persistence",
-        "Applied <strong>Responsive Design</strong> to support phones and tablets with different screen sizes",
-        "Collaborated with clients in agile workflows, handling sprints, demos, and feedback iterations",
-        "Followed best practices for clean, reusable, and scalable Flutter codebases"
-      ]
-    },
-    {
-      "role": "Android Developer Intern",
-      "company": "CodeAlpha",
-      "period": "04/2025 – 05/2025",
-      "tasks": [
-        "Designed and developed 3 Android applications: Flashcard Quiz, Random Quote Generator, and Fitness Tracker",
-        "Implemented MVVM architecture with Jetpack components (ViewModel, LiveData, Room) for scalable apps",
-        "Integrated SQLite database and RecyclerView for efficient data storage and display",
-        "Applied Material Design principles to create modern, responsive, and engaging UIs",
-        "Practiced clean architecture to ensure maintainable and testable codebases",
-        "Collaborated on version control using Git & GitHub for real-world project workflows",
-        "Gained professional experience working within deadlines and delivering production-ready features"
+        "Developed a complete <strong>Employee Attendance Management System</strong> with Excel integration",
+        "Integrated Apache POI for importing/exporting attendance records with validation logic",
+        "Built features for check-in/out, status tracking (Present, Absent, Late), and detailed reporting",
+        "Utilized StateFlow for reactive UI updates and SafeArgs for navigation",
+        "Designed dynamic UIs with RecyclerView and custom adapters"
       ]
     }
   ],
   "education": {
-    "intro": "As a self-taught Mobile Developer, I’ve committed myself to continuous growth by learning through online courses, official documentation, tutorials, and practical projects. This journey has allowed me to build a solid foundation in Android and Flutter development, while constantly exploring new tools, frameworks, and best practices to enhance my skills. Here’s a summary of my educational journey:",
+    "intro": "I hold a Bachelor's Degree from Ain Shams University and have dedicated my career to mastering mobile software engineering through intensive practical experience and continuous professional development.",
     "cards": [
       {
-        "title": "Self-Taught Mobile Developer",
-        "period": "2023 - Present",
+        "title": "Bachelor's Degree, Faculty of Business",
+        "period": "Graduated",
         "icon": "fas fa-graduation-cap",
         "details": [
-          "Android development with Kotlin & Java",
-          "Cross-platform mobile development using Flutter & Dart",
-          "Software architecture (MVVM, Clean Architecture, MVI)",
-          "UI/UX principles, prototyping, and responsive design",
-          "Version control with Git & GitHub",
-          "Backend integration with Firebase, REST APIs, SQLite, Room",
-          "Modern development practices (Jetpack Compose, Material Design 3)"
+          "Ain Shams University, Egypt"
         ]
       },
       {
-        "title": "Online Courses & Certifications",
-        "period": "Ongoing",
+        "title": "Android Software Engineering",
+        "period": "Continuous",
         "icon": "fas fa-laptop-code",
         "details": [
-          "Flutter & Dart – The Complete Guide (Udemy)",
-          "Kotlin for Android Developers (Coursera)",
-          "Android Jetpack Masterclass (Udemy)",
-          "Clean Architecture & SOLID Principles (Pluralsight)",
-          "Git & GitHub Essentials (LinkedIn Learning)",
-          "UI/UX Design for Mobile Apps (FreeCodeCamp)",
-          "Agile & Scrum Foundations (Coursera)",
-          "Problem Solving & Data Structures (HackerRank / LeetCode practice)"
-        ]
-      },
-      {
-        "title": "Additional Learning",
-        "period": "Continuous",
-        "icon": "fas fa-book",
-        "details": [
-          "Reading official Android & Flutter documentation",
-          "Following Google Developers & Flutter community updates",
-          "Building personal projects to apply new skills",
-          "Practicing algorithmic challenges to improve problem-solving",
-          "Exploring state management in Flutter (Provider, Riverpod, Bloc)"
+          "Specialized in Kotlin & Modern Android Development",
+          "Deep focus on Clean Architecture and Solid Principles",
+          "Advanced state management with Coroutines and Flow",
+          "Expertise in local persistence with Room and NoSQL"
         ]
       }
     ]
