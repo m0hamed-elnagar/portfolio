@@ -8,9 +8,11 @@
     "email": "mohamed.3lnagar@gmail.com",
     "linkedin": "https://www.linkedin.com/in/mohamed-elnagar-b62802231",
     "github": "https://github.com/m0hamed-elnagar",
+    "whatsapp": "https://wa.me/201017713257",
     "telegram": "#",
     "facebook": "#",
-    "heroSubtitle": "Skilled Android Developer with hands-on experience delivering production-grade applications from concept through deployment. Proficient in Kotlin, Room, Paging, Hilt, and Firebase services."
+    "heroSubtitle": "Skilled Android Developer with hands-on experience delivering production-grade applications from concept through deployment. Proficient in Kotlin, Room, Paging, Hilt, and Firebase services.",
+    "contactHeadline": "I’m always open to discussing new opportunities, collaborations, or simply connecting with like-minded people. Feel free to reach out via any of the platforms below!"
   },
   "about": {
     "image": "portfolio/profile_pic.jpg",

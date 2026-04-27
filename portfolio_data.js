@@ -6,12 +6,11 @@ class PortfolioDataManager {
     this.experienceContainer = document.getElementById('experience-timeline');
     this.educationIntro = document.getElementById('education-intro');
     this.educationGrid = document.getElementById('education-grid');
-    this.contactDetails = document.querySelector('.contact-details');
+    this.contactContainer = document.getElementById('contact-container');
     this.footerLinks = document.querySelector('.footer-links');
     
     // Personal Info Elements
     this.logoElements = document.querySelectorAll('.logo');
-    this.heroName = document.querySelector('.typed-text'); // Typed.js target
     this.heroSubtitle = document.querySelector('.subtitle');
   }
 
@@ -26,6 +25,7 @@ class PortfolioDataManager {
       if (data.skills) this.renderSkills(data.skills);
       if (data.experience) this.renderExperience(data.experience);
       if (data.education) this.renderEducation(data.education);
+      if (data.personal) this.renderContact(data.personal);
 
       // Projects are handled by ProjectManager, but we pass data if available
       if (data.projects && window.projectManager) {
@@ -132,31 +132,6 @@ class PortfolioDataManager {
       this.heroSubtitle.textContent = personal.heroSubtitle;
     }
 
-    if (this.contactDetails) {
-      this.contactDetails.innerHTML = `
-        <div class="content-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>${personal.location}</p>
-        </div>
-        <div class="content-item">
-            <i class="fas fa-phone-alt"></i>
-            <p>${personal.phone}</p>
-        </div>
-        <div class="content-item">
-            <i class="fas fa-envelope"></i>
-            <p><a href="mailto:${personal.email}" aria-label="Send me an email" title="Email">${personal.email}</a></p>
-        </div>
-        <div class="content-item">
-            <i class="fab fa-linkedin"></i>
-            <p><a href="${personal.linkedin}" target="_blank">LinkedIn</a></p>
-        </div>
-        <div class="content-item">
-            <i class="fab fa-github"></i>
-            <p><a href="${personal.github}" target="_blank">GitHub</a></p>
-        </div>
-      `;
-    }
-
     if (this.footerLinks) {
       this.footerLinks.innerHTML = `
         <a href="${personal.github}" target="_blank" aria-label="Visit my GitHub profile" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -166,6 +141,44 @@ class PortfolioDataManager {
         <a href="mailto:${personal.email}" aria-label="Send me an email" title="Email"><i class="fas fa-envelope"></i></a>
       `;
     }
+  }
+
+  renderContact(personal) {
+    if (!this.contactContainer) return;
+
+    this.contactContainer.innerHTML = `
+      <div class="contact-card-dynamic" data-aos="zoom-in">
+          <p class="contact-headline">${personal.contactHeadline}</p>
+          
+          <div class="contact-grid-modern">
+              <a href="mailto:${personal.email}" class="contact-item-modern email">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email Me</span>
+                  <small>${personal.email}</small>
+              </a>
+              <a href="${personal.whatsapp}" target="_blank" class="contact-item-modern whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>WhatsApp</span>
+                  <small>Let's Chat</small>
+              </a>
+              <a href="${personal.linkedin}" target="_blank" class="contact-item-modern linkedin">
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                  <small>Professional Profile</small>
+              </a>
+              <a href="${personal.github}" target="_blank" class="contact-item-modern github">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                  <small>View Code</small>
+              </a>
+          </div>
+
+          <div class="contact-info-footer">
+              <div class="info-tag"><i class="fas fa-map-marker-alt"></i> ${personal.location}</div>
+              <div class="info-tag"><i class="fas fa-phone-alt"></i> ${personal.phone}</div>
+          </div>
+      </div>
+    `;
   }
 }
 
