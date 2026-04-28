@@ -46,15 +46,23 @@
 
 .card {
   position: relative;
-  background:var(--gradient-background);
+  background: var(--card-background);
   border: var(--border-general);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: var(--shadow-project-card);
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 320px;
   max-width: 420px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .card::after {
@@ -65,10 +73,15 @@
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-  opacity: 0.25;
+  background: var(--brand-gradient);
+  opacity: 0.08;
   filter: blur(45px);
   z-index: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover::after {
+  opacity: 0.15;
 }
 
 .card > * {
@@ -76,35 +89,93 @@
   z-index: 1;
 }
 
-.card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-project-card-hover);
+.card.featured {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 15px 35px rgba(13, 148, 136, 0.2);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featured-badge.flutter {
+  background: #0277bd; /* Flutter Blue */
+}
+
+.featured-badge.compose {
+  background: #3d9970; /* Compose Green */
+}
+
+.featured-badge.xml {
+  background: #e67e22; /* XML Orange */
+}
+
+@media (min-width: 992px) {
 }
 
 .project-image {
   position: relative;
   cursor: pointer;
   flex-shrink: 0;
-}
-
-.project-image img {
-  display: block;
-  width: 100%;
+  overflow: hidden;
   height: 320px;
-  object-fit: cover;
-  transition: transform .25s ease, filter .25s ease;
+  background: #000;
+  width: 100%;
 }
 
-.project-image:hover img {
-  transform: scale(1.02);
-  filter: brightness(.95);
+.image-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Default to 1 image per view (mobile) */
+  --items-per-view: 1;
+}
+
+@media (min-width: 768px) {
+  .image-slider {
+    /* Show 3 images per view on desktop */
+    --items-per-view: 3;
+  }
 }
 
 .slider-container {
   display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  gap: 0;
+}
+
+.slider-image {
+  /* Each image takes a fraction of the visible width */
+  flex: 0 0 calc(100% / var(--items-per-view));
+  width: calc(100% / var(--items-per-view));
+  height: 320px;
+  object-fit: contain;
+  background: #000;
+  display: block;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.project-image:hover .slider-image {
+  transform: scale(1.02);
+  filter: brightness(.95);
 }
 
 .slider-nav {
@@ -114,21 +185,28 @@
   right: 0;
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
+  z-index: 10;
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .slider-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--light-gray);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .slider-dot.active {
-  background: var(--primary-dark);
+  background: var(--primary-color);
   transform: scale(1.2);
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .slider-arrows {
@@ -142,13 +220,18 @@
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slider-arrows button {
+  pointer-events: auto;
 }
 
 .project-image:hover .slider-arrows {
   opacity: 1;
 }
 
-/* Auto-play controls */
 .slider-controls {
   position: absolute;
   top: 10px;
@@ -157,6 +240,7 @@
   gap: 5px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 10;
 }
 
 .project-image:hover .slider-controls {
@@ -177,20 +261,26 @@
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: var(--light-text);
+  text-align: left;
 }
 
 .project-title h3 {
   margin: 0;
   font-size: 1.4rem;
-  color: var(--light-text);
+  color: inherit;
 }
 
 .toggle-arrow {
   display: inline-block;
   cursor: pointer;
   transition: transform .28s ease;
-  color: var(--primary-dark);
-  font-size: 1.9rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
   transform-origin: center;
 }
 
@@ -198,20 +288,18 @@
   transform: rotate(180deg);
 }
 
-/* details area (collapsible) */
 .details {
   max-height: 0;
   overflow: hidden;
   padding: 0 18px;
   background: var(--inner-details-background);
-  border-radius: 24px;
+  border-radius: 16px;
   transition: max-height .36s ease, padding .28s ease;
-  flex-shrink: 0;
 }
 
 .details-inner {
   padding: 14px 0;
-  color: var(--light-text);
+  color: var(--dark-text);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -241,11 +329,46 @@
   font-size: 12px;
 }
 
-.project-links {
-  margin-top: 12px;
+.external-links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
-  justify-items: auto;
-  justify-content: space-between;
+  z-index: 25;
+}
+
+.icon-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.icon-link:hover {
+  transform: translateY(-3px) scale(1.1);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(13, 148, 136, 0.4);
+}
+
+.icon-link.github:hover {
+  background: #333;
+  border-color: #444;
+}
+
+.icon-link.demo:hover {
+  background: var(--primary-color);
 }

@@ -151,5 +151,6 @@ class PortfolioDataManager {
 
 document.addEventListener('DOMContentLoaded', () => {
   window.portfolioData = new PortfolioDataManager();
-  window.portfolioData.loadPortfolioData('data.json');
+  const dataFile = 'data.json?t=' + Date.now();
+  window.portfolioData.loadPortfolioData(dataFile);
 });

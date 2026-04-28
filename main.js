@@ -50,8 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-projectsScroll('scroll-left-android-projects', 'scroll-right-android-projects', '.android-projects');
-projectsScroll('scroll-left-flutter-projects', 'scroll-right-flutter-projects', '.flutter-projects');
+projectsScroll('scroll-left-projects', 'scroll-right-projects', '.all-projects');
 
   function projectsScroll(scroll_left, scroll_right, projects_container) {
   const scrollLeftBtn = document.getElementById(scroll_left);

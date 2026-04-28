@@ -29,7 +29,7 @@
       font-size: clamp(1.6rem, 4vw, 2.2rem);
       font-weight: 800;
       letter-spacing: 3px;
-      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      background: var(--brand-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -43,14 +43,15 @@
     .nav-links a {
       position: relative;
       text-decoration: none;
-      color: var(--light-text);
+      color: var(--dark-text);
       font-weight: 600;
       font-size: clamp(0.95rem, 1.5vw, 1.04rem);
+      transition: color 0.3s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--primary-dark);
+      color: var(--primary-color);
     }
 
     .mobile-menu {
@@ -259,9 +260,7 @@
     .hero-glow {
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 40% 70%,
-          var(--rings-1),
-          transparent 40%);
+      background: var(--hero-bg-gradient);
       animation: glow 8s ease-in-out infinite;
       z-index: 0;
     }

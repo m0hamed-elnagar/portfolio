@@ -1,4 +1,4 @@
-# Ramzy Ahmed Portfolio
+# Mohamed Elnagar Portfolio
 
 A high-performance, professional web portfolio for mobile developers, built with vanilla HTML, CSS, and JavaScript. This project serves as a modern showcase for Android and Flutter development expertise, featuring a responsive design, dark/light mode, and dynamic project rendering.
 

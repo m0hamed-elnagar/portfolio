@@ -6,7 +6,7 @@
 
 .skill-category {
   position: relative;
-  background: var(--gradient-background);
+  background: var(--card-background);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: var(--border-general);
@@ -14,6 +14,7 @@
   border-radius: 24px;
   box-shadow: var(--shadow-skill-category);
   overflow: hidden;
+  transition: all 0.4s ease;
 }
 
 .skill-category::after {
@@ -24,8 +25,8 @@
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-  opacity: 0.22;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  opacity: 0.15;
   filter: blur(45px);
   z-index: 0;
 }

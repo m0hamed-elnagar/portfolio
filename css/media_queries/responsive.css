@@ -215,9 +215,8 @@
     transform: translateY(-3px);
   }
 
-  .project-image img {
-    width: 100%;
-    height: 240px;
+  .project-image {
+    height: 280px;
   }
 
   .project-title h3 {
