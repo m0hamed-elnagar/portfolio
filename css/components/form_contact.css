@@ -46,6 +46,11 @@
     color: #fff;
 }
 
+.action-btn.call {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
 .action-btn:hover {
     transform: translateY(-2px);
     filter: brightness(1.1);
@@ -79,10 +84,17 @@
 .contact-meta {
     font-size: 0.85rem;
     color: var(--dark-text);
-    opacity: 0.6;
+    opacity: 0.8;
     display: flex;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .contact-divider-small {

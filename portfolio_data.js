@@ -126,6 +126,11 @@ class PortfolioDataManager {
     if (personal.email && personal.email !== '#') {
         actionsHtml += `<a href="mailto:${personal.email}" class="action-btn email"><i class="fas fa-envelope"></i> <span>Email</span></a>`;
     }
+    if (personal.phone && personal.phone !== '#') {
+        // Clean phone number for tel: link (remove spaces)
+        const cleanPhone = personal.phone.replace(/\s+/g, '');
+        actionsHtml += `<a href="tel:${cleanPhone}" class="action-btn call"><i class="fas fa-phone-alt"></i> <span>Call</span></a>`;
+    }
     if (personal.whatsapp && personal.whatsapp !== '#') {
         actionsHtml += `<a href="${personal.whatsapp}" target="_blank" class="action-btn whatsapp"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>`;
     }
@@ -141,8 +146,8 @@ class PortfolioDataManager {
           <div class="contact-divider"></div>
           <div class="contact-socials">${socialsHtml}</div>
           <div class="contact-meta">
-              <span><i class="fas fa-map-marker-alt"></i> ${personal.location}</span>
-              ${personal.languages ? `<span class="contact-divider-small">|</span> <span><i class="fas fa-globe"></i> ${personal.languages}</span>` : ''}
+              <span class="meta-item"><i class="fas fa-map-marker-alt"></i> ${personal.location}</span>
+              ${personal.languages ? `<span class="contact-divider-small">|</span> <span class="meta-item"><i class="fas fa-globe"></i> ${personal.languages}</span>` : ''}
           </div>
       </div>
     `;

@@ -8,13 +8,13 @@
     "description": "Mohamed Elnagar - Android Developer specializing in Kotlin, Room, Paging, Hilt, and Firebase services.",
     "icons": [
       {
-        "src": "assets/images/profile_pic.jpg",
+        "src": "assets/profile_pic.jpg",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any maskable"
       },
       {
-        "src": "assets/images/profile_pic.jpg",
+        "src": "assets/profile_pic.jpg",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any maskable"
