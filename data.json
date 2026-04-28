@@ -200,6 +200,7 @@
         "Material 3",
         "JUnit / MockK"
       ],
+      "customTabs": 2,
       "features": [
         "Robust Excel integration for importing/exporting worker records",
         "Configurable Calendar system for holiday/weekend workday logic",
