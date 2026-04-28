@@ -32,9 +32,9 @@
         { "name": "MVVM / MVI", "level": "Advanced" },
         { "name": "Multimodule Architecture", "level": "Advanced" },
         { "name": "Domain Driven Design (DDD)", "level": "Advanced" },
-        { "name": "Dependency Injection (Hilt)", "level": "Master" },
-        { "name": "SOLID Principles", "level": "Master" },
-        { "name": "Product Flavors", "level": "Advanced" }
+        { "name": "Dependency Injection ", "level": "Master" },
+        { "name": "KMP / CMP", "level": "Intermediate" },
+        { "name": "SOLID Principles", "level": "Master" }
       ]
     },
     {
@@ -57,19 +57,19 @@
         { "name": "Jetpack Compose", "level": "Advanced" },
         { "name": "Material Design 3", "level": "Master" },
         { "name": "RTL Layout Support", "level": "Master" },
-        { "name": "Apache POI (Excel)", "level": "Advanced" },
         { "name": "Google Credentials API", "level": "Advanced" },
+        { "name": "AdMob / Analytics", "level": "Advanced" },
         { "name": "Firebase Suite", "level": "Advanced" },
         { "name": "Retrofit / REST", "level": "Advanced" }
       ]
     },
     {
-      "category": "Quality & Tools",
-      "icon": "fas fa-check-circle",
+      "category": "AI & Productivity",
+      "icon": "fas fa-robot",
       "items": [
-        { "name": "Unit/Integration Testing", "level": "Advanced" },
+        { "name": "Gemini / Claude", "level": "Advanced" },
+        { "name": "Qwen / DeepSeek", "level": "Advanced" },
         { "name": "Git & GitHub", "level": "Advanced" },
-        { "name": "Proguard / R8", "level": "Advanced" },
         { "name": "Postman", "level": "Advanced" },
         { "name": "Agile / Scrum", "level": "Advanced" },
         { "name": "Performance Tuning", "level": "Advanced" }
@@ -120,23 +120,23 @@
       "tech": [
         "Flutter",
         "Dart",
-        "Bloc",
-        "Hive CE (NoSQL)",
+        "BLoC Test",
+        "adhan library",
         "WorkManager",
-        "Injectable",
+        "Boot Receivers",
+        "Hive CE",
         "Freezed",
-        "Hardware Haptics",
         "RTL Support"
       ],
       "features": [
         "Modular Clean Architecture & DDD for 100% testability",
-        "Global Time Automation engine for prayer sync (DST & Timezones)",
+        "Global Time Automation via adhan library with custom offsets",
         "System-level media service for background audio & lock-screen controls",
-        "Immersive Quran reader with multiple text modes (Uthmani, IndoPak) and scanned Mushaf",
-        "Advanced Qada tracking with cumulative debt management and bulk entry",
-        "Native Android integration for Home Widgets and background tasks",
-        "Dynamic Material 3 Theming Engine: 4 premium presets + custom palette generation",
-        "Performance tuned for 60fps animations & hardware-haptic feedback"
+        "Native Android Boot Receivers to reschedule alarms after restart",
+        "Immersive Quran reader with multiple text modes and scanned Mushaf",
+        "Advanced Qada tracking with cumulative debt management",
+        "Dynamic Material 3 Theming Engine: 4 presets + dual-seed palette generation",
+        "Native Android components for Home Widgets and background tasks"
       ],
       "github": "https://github.com/m0hamed-elnagar/fard",
       "demo": ""
@@ -161,17 +161,17 @@
         "Koin (DI)",
         "Ktor Client",
         "Room",
-        "Firebase Cloud Messaging",
-        "Coroutines & Flow",
-        "Material 3"
+        "FCM ",
+        "Coil 3",
+        "AdMob"
       ],
       "features": [
+        "Optimized rendering: Achieved <200ms cold-start on Paging 3 feed",
+        "Smooth performance: 60 FPS scrolling even on 1GB RAM devices",
         "Bilingual support (Hindi/English) with dynamic runtime switching",
-        "Real-time news aggregation using Ktor and Kotlinx-Serialization",
         "Integrated short-video platform and YouTube Android Player",
-        "Multi-flavor architecture (User, Admin, Quiks) with flavor-specific modules",
-        "Advanced notification management with topic-based segmentation",
-        "Reactive database with Room and Flow streams"
+        "Topic-based personalized push notifications (Firebase)",
+        "Accessibility: Full content descriptions and screen reader support"
       ],
       "github": "https://github.com/m0hamed-elnagar/Taaza-Today",
       "demo": ""
@@ -193,54 +193,21 @@
         "Kotlin 2.2.0",
         "Hilt",
         "Room",
-        "Paging 3 (3.3.6)",
+        "Paging 3",
         "Firebase Remote Config",
         "Apache POI",
         "Material 3",
-        "Coroutines & Flow"
+        "JUnit / MockK"
       ],
-      "customTabs": 2,
       "features": [
-        "Robust Excel data import/export with complex validation logic",
-        "Configurable holiday/weekend logic for precise working-day calculations",
+        "Robust Excel integration for importing/exporting worker records",
+        "Configurable Calendar system for holiday/weekend workday logic",
         "Reactive UI architecture using StateFlow and SafeArgs navigation",
-        "Feature management via Firebase Remote Config",
-        "Detailed history management with Paging 3.3.6",
-        "Detailed working-day and holiday management"
+        "Automated rejection reporting for invalid data formats",
+        "Detailed history management with Paging 3 (300+ daily records)",
+        "Feature management via Firebase Remote Config kill-switch"
       ],
       "github": "https://github.com/m0hamed-elnagar/Sheet_Compute",
-      "demo": ""
-    },
-    {
-      "title": "OptPos (Retail Management)",
-      "category": "android",
-      "uiFramework": "XML",
-      "description": "Seller operations tool for billing, registration, and inventory tracking with secure authentication.",
-      "images": ["portfolio/profile_pic.jpg"],
-      "tech": ["Kotlin", "Google Sign-In", "Billing API", "Firebase", "MVI"],
-      "features": [
-        "Secure One-Tap registration with Google Credentials API",
-        "Real-time billing and invoice processing engine",
-        "Seller performance analytics and activity tracking",
-        "Cloud-synced offline-first database architecture"
-      ],
-      "github": "",
-      "demo": ""
-    },
-    {
-      "title": "DrAiA (Medical Sessions)",
-      "category": "android",
-      "uiFramework": "XML",
-      "description": "Patient record management system for ophthalmology, handling exams, diagnoses, and shared treatments.",
-      "images": ["portfolio/profile_pic.jpg"],
-      "tech": ["Kotlin", "Multimodule", "Product Flavors", "Room", "PDF Engine"],
-      "features": [
-        "Patient history and ophthalmology-specific lens data management",
-        "Automated PDF/Image generation for session summaries",
-        "Integrated WhatsApp sharing for medical reports",
-        "Shared codebase with OptPos using Product Flavors"
-      ],
-      "github": "",
       "demo": ""
     }
   ],
@@ -250,11 +217,12 @@
       "company": "2is Company",
       "period": "07/2023 – 02/2024",
       "tasks": [
-        "Designed and developed **Medical Sessions App (DrAiA)** and **Seller Management App (OptPos)** from scratch",
-        "Implemented clean, scalable solutions using **multimodule architecture** and product flavors",
-        "Applied Kotlin, MVVM, Clean Architecture, Room, MySQL, Paging, Coroutines, and Flow",
-        "Engineered automated PDF/Image report generation for instant medical record sharing",
-        "Maintained existing search engine apps with high performance and Paging support"
+        "Architected a **Multimodule System** using **Product Flavors** to manage three distinct enterprise apps from a unified codebase",
+        "Maintained a **98%+ crash-free rate** via rigorous Crashlytics monitoring and Proguard optimization",
+        "Developed medical and retail solutions from scratch featuring patient history and real-time billing",
+        "Engineered automated **PDF/Image report generation** with native WhatsApp sharing integration",
+        "Modernized legacy search engines using **Room-to-MySQL sync** and optimized Paging support",
+        "Participated in peer code reviews, enforcing Clean Architecture and SOLID standards"
       ]
     },
     {
