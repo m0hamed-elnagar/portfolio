@@ -32,7 +32,7 @@
         { "name": "MVVM / MVI", "level": "Advanced" },
         { "name": "Multimodule Architecture", "level": "Advanced" },
         { "name": "Domain Driven Design (DDD)", "level": "Advanced" },
-        { "name": "Dependency Injection ", "level": "Master" },
+        { "name": "Dependency Injection", "level": "Master" },
         { "name": "KMP / CMP", "level": "Intermediate" },
         { "name": "SOLID Principles", "level": "Master" }
       ]
@@ -51,28 +51,28 @@
       ]
     },
     {
-      "category": "UI & Integrations",
-      "icon": "fas fa-layer-group",
+      "category": "Testing & Quality",
+      "icon": "fas fa-check-circle",
       "items": [
-        { "name": "Jetpack Compose", "level": "Advanced" },
-        { "name": "Material Design 3", "level": "Master" },
-        { "name": "RTL Layout Support", "level": "Master" },
-        { "name": "Google Credentials API", "level": "Advanced" },
-        { "name": "AdMob / Analytics", "level": "Advanced" },
-        { "name": "Firebase Suite", "level": "Advanced" },
-        { "name": "Retrofit / REST", "level": "Advanced" }
+        { "name": "JUnit / MockK", "level": "Advanced" },
+        { "name": "Espresso / UI Test", "level": "Advanced" },
+        { "name": "Baseline Profiler", "level": "Advanced" },
+        { "name": "R8 / ProGuard", "level": "Advanced" },
+        { "name": "Android Lint", "level": "Advanced" },
+        { "name": "Crashlytics / ANR", "level": "Advanced" },
+        { "name": "Performance Tuning", "level": "Advanced" }
       ]
     },
     {
-      "category": "AI & Productivity",
+      "category": "AI & Integrations",
       "icon": "fas fa-robot",
       "items": [
-        { "name": "Gemini / Claude", "level": "Advanced" },
-        { "name": "Qwen / DeepSeek", "level": "Advanced" },
-        { "name": "Git & GitHub", "level": "Advanced" },
-        { "name": "Postman", "level": "Advanced" },
-        { "name": "Agile / Scrum", "level": "Advanced" },
-        { "name": "Performance Tuning", "level": "Advanced" }
+        { "name": "Gemini / Claude / Qwen", "level": "Advanced" },
+        { "name": "Material Design 3", "level": "Master" },
+        { "name": "Firebase / Auth", "level": "Advanced" },
+        { "name": "Git / GitHub Flow", "level": "Advanced" },
+        { "name": "AdMob / Analytics", "level": "Advanced" },
+        { "name": "Postman / REST", "level": "Advanced" }
       ]
     }
   ],
@@ -126,6 +126,7 @@
         "Boot Receivers",
         "Hive CE",
         "Freezed",
+        "Unit/Widget Tests",
         "RTL Support"
       ],
       "features": [
@@ -158,16 +159,16 @@
       "tech": [
         "Kotlin",
         "Jetpack Compose",
-        "Koin (DI)",
-        "Ktor Client",
-        "Room",
-        "FCM ",
-        "Coil 3",
-        "AdMob"
+        "Baseline Profiler",
+        "Ktor / Koin",
+        "Room / Flow",
+        "FCM / AdMob",
+        "JUnit / Espresso"
       ],
       "features": [
-        "Optimized rendering: Achieved <200ms cold-start on Paging 3 feed",
-        "Smooth performance: 60 FPS scrolling even on 1GB RAM devices",
+        "Performance: Baseline Profile Optimization for <200ms cold-start",
+        "Smooth UI: 60 FPS scrolling even on 1GB RAM devices",
+        "Quality: Achieved 80%+ code coverage on critical domain modules",
         "Bilingual support (Hindi/English) with dynamic runtime switching",
         "Integrated short-video platform and YouTube Android Player",
         "Topic-based personalized push notifications (Firebase)",
@@ -215,10 +216,10 @@
     {
       "role": "Android Developer",
       "company": "2is Company",
-      "period": "07/2023 – 02/2024",
+      "period": "2024 – 2025",
       "tasks": [
         "Architected a **Multimodule System** using **Product Flavors** to manage three distinct enterprise apps from a unified codebase",
-        "Maintained a **98%+ crash-free rate** via rigorous Crashlytics monitoring and Proguard optimization",
+        "Maintained a **98%+ crash-free rate** via rigorous Crashlytics monitoring and R8/ProGuard optimization",
         "Developed medical and retail solutions from scratch featuring patient history and real-time billing",
         "Engineered automated **PDF/Image report generation** with native WhatsApp sharing integration",
         "Modernized legacy search engines using **Room-to-MySQL sync** and optimized Paging support",

@@ -211,13 +211,14 @@
 
 .slider-arrows {
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
-  transform: translateY(-50%);
+  align-items: center;
+  padding: 0; /* Removing horizontal padding to allow buttons to reach edges */
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
@@ -226,6 +227,19 @@
 
 .slider-arrows button {
   pointer-events: auto;
+  height: 100%; /* Make arrows span full height for maximum vertical touch space */
+  width: 60px; /* Wider hit area */
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider-arrows button:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .project-image:hover .slider-arrows {
@@ -234,13 +248,13 @@
 
 .slider-controls {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 45px; /* Moved to bottom-right, above the dots */
+  right: 15px;
   display: flex;
   gap: 5px;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 10;
+  transition: all 0.3s ease;
+  z-index: 20;
 }
 
 .project-image:hover .slider-controls {

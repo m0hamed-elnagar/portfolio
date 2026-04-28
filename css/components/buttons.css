@@ -109,40 +109,53 @@
 }
 
 .control-btn {
-  background: var(--controrls-btn-background);
+  background: var(--controls-btn-background);
   color: var(--dark-text);
   border: none;
-  width: 25px;
-  height: 25px;
+  width: 32px; /* Increased from 25px */
+  height: 32px; /* Increased from 25px */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .control-btn:hover {
-  background: var(--controrls-btn-background-hover);
+  background: var(--controls-btn-background-hover);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.slider-arrow-icon {
+  background: var(--controls-btn-background);
+  color: var(--dark-text);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.slider-arrow:hover .slider-arrow-icon {
+  background: var(--controls-btn-background-hover);
+  color: #fff;
   transform: scale(1.1);
 }
 
 .slider-arrow {
-  background: var(--controrls-btn-background);
-  color: var(--dark-text);
+  background: transparent;
   border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.slider-arrow:hover {
-  background: var(--controrls-btn-background-hover);
-  transform: scale(1.1);
 }

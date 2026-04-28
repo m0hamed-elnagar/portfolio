@@ -88,8 +88,8 @@ class ProjectManager {
           ${hasMultipleImages ? `
           <div class="slider-nav" role="tablist"></div>
           <div class="slider-arrows">
-            <button class="slider-arrow prev" title="Previous Image" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-            <button class="slider-arrow next" title="Next Image" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            <button class="slider-arrow prev" title="Previous Image" aria-label="Previous slide"><span class="slider-arrow-icon"><i class="fas fa-chevron-left"></i></span></button>
+            <button class="slider-arrow next" title="Next Image" aria-label="Next slide"><span class="slider-arrow-icon"><i class="fas fa-chevron-right"></i></span></button>
           </div>
           <div class="slider-controls">
             <button class="control-btn play-pause" title="Play/Pause Slideshow" aria-label="Toggle slideshow">

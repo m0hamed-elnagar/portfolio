@@ -114,7 +114,13 @@ class PortfolioDataManager {
         if (personal.linkedin && personal.linkedin !== '#') footerHtml += `<a href="${personal.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>`;
         if (personal.telegram && personal.telegram !== '#') footerHtml += `<a href="${personal.telegram}" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>`;
         if (personal.whatsapp && personal.whatsapp !== '#') footerHtml += `<a href="${personal.whatsapp}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>`;
-        if (personal.email && personal.email !== '#') footerHtml += `<a href="mailto:${personal.email}" title="Email"><i class="fas fa-envelope"></i></a>`;
+        if (personal.email && personal.email !== '#') {
+            // Use direct Gmail compose link for gmail addresses
+            const emailLink = personal.email.endsWith('@gmail.com') 
+                ? `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}`
+                : `mailto:${personal.email}`;
+            footerHtml += `<a href="${emailLink}" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>`;
+        }
         this.footerLinks.innerHTML = footerHtml;
     }
   }
@@ -124,12 +130,15 @@ class PortfolioDataManager {
 
     let actionsHtml = '';
     if (personal.email && personal.email !== '#') {
-        actionsHtml += `<a href="mailto:${personal.email}" class="action-btn email"><i class="fas fa-envelope"></i> <span>Email</span></a>`;
+        const emailLink = personal.email.endsWith('@gmail.com') 
+            ? `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}`
+            : `mailto:${personal.email}`;
+        actionsHtml += `<a href="${emailLink}" target="_blank" class="action-btn email"><i class="fas fa-envelope"></i> <span>Email</span></a>`;
     }
     if (personal.phone && personal.phone !== '#') {
         // Clean phone number for tel: link (remove spaces)
         const cleanPhone = personal.phone.replace(/\s+/g, '');
-        actionsHtml += `<a href="tel:${cleanPhone}" class="action-btn call"><i class="fas fa-phone-alt"></i> <span>Call</span></a>`;
+        actionsHtml += `<a href="tel:${cleanPhone}" target="_self" class="action-btn call"><i class="fas fa-phone-alt"></i> <span>Call</span></a>`;
     }
     if (personal.whatsapp && personal.whatsapp !== '#') {
         actionsHtml += `<a href="${personal.whatsapp}" target="_blank" class="action-btn whatsapp"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>`;

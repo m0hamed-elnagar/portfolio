@@ -37,6 +37,10 @@
     --border-accent: 1px solid rgba(13, 148, 136, 0.2);
     --border-general: 1px solid rgba(148, 163, 184, 0.1);
     --gradient-background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.4));
+    
+    /* Control Buttons */
+    --controls-btn-background: rgba(15, 23, 42, 0.6);
+    --controls-btn-background-hover: var(--primary-color);
 }
 
 /* Light Theme Variables */
@@ -80,4 +84,8 @@
     --rim-light: 1px solid rgba(0, 0, 0, 0.05);
     --border-accent: 1px solid rgba(13, 148, 136, 0.15);
     --border-general: 1px solid rgba(0, 0, 0, 0.08);
+
+    /* Control Buttons */
+    --controls-btn-background: rgba(255, 255, 255, 0.8);
+    --controls-btn-background-hover: var(--primary-color);
 }
