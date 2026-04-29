@@ -1,5 +1,5 @@
 .contact-compact-wrapper {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 10px 20px 40px;
 }
@@ -12,26 +12,27 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: var(--border-general);
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 100px; /* Pill shape */
     box-shadow: var(--shadow-skill-category);
-    gap: 20px;
+    gap: 15px;
+    width: 100%;
 }
 
 .contact-actions {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .action-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
+    gap: 6px;
+    padding: 8px 16px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
     white-space: nowrap;
 }
@@ -59,18 +60,18 @@
 
 .contact-divider {
     width: 1px;
-    height: 30px;
+    height: 25px;
     background: rgba(255, 255, 255, 0.1);
 }
 
 .contact-socials {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .contact-socials a {
     color: var(--light-text);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     opacity: 0.7;
 }
@@ -82,19 +83,19 @@
 }
 
 .contact-meta {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--dark-text);
     opacity: 0.8;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     white-space: nowrap;
 }
 
 .meta-item {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
 }
 
 .contact-divider-small {

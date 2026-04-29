@@ -148,13 +148,13 @@
       "uiFramework": "Compose",
       "description": "A production-ready bilingual news aggregator and short-video platform built with Jetpack Compose and Ktor.",
       "images": [
-        "assets/projects/taaza_today/screens/home.jpg",
-        "assets/projects/taaza_today/screens/home_admin.jpg",
-        "assets/projects/taaza_today/screens/article_detail.jpg",
-        "assets/projects/taaza_today/screens/shorts.jpg",
-        "assets/projects/taaza_today/screens/quiks.jpg",
-        "assets/projects/taaza_today/screens/favorites.jpg",
-        "assets/projects/taaza_today/screens/more.jpg"
+        "assets/projects/taaza_today/screens/home.webp",
+        "assets/projects/taaza_today/screens/home_admin.webp",
+        "assets/projects/taaza_today/screens/article_detail.webp",
+        "assets/projects/taaza_today/screens/shorts.webp",
+        "assets/projects/taaza_today/screens/quiks.webp",
+        "assets/projects/taaza_today/screens/favorites.webp",
+        "assets/projects/taaza_today/screens/more.webp"
       ],
       "tech": [
         "Kotlin",
